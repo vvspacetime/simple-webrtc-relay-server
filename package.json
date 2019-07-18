@@ -1,0 +1,26 @@
+{
+  "name": "simple-webrtc-relay-server",
+  "version": "1.0.0",
+  "description": "100 lines relay webrtc stream",
+  "main": "server.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvspacetime/simple-webrtc-relay-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vvspacetime/simple-webrtc-relay-server/issues"
+  },
+  "homepage": "https://github.com/vvspacetime/simple-webrtc-relay-server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
