@@ -12,6 +12,7 @@ const offerOptions = {
     offerToReceiveVideo: 1
 };
 let id = random()
+const relayServerUrl = "http://192.168.125.140:9000"
 
 async function start() {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: {width: 240, height: 180} });
@@ -73,13 +74,13 @@ async function waitCandidate(pc) {
 }
 
 async function createPipe(srcIp, srcPort) {
-    const url = `http://127.0.0.1:9000/create?srcIp=${srcIp}&srcPort=${srcPort}&id=${id}`
+    const url = `${relayServerUrl}/create?srcIp=${srcIp}&srcPort=${srcPort}&id=${id}`
     let resp = await fetch(url)
     return await resp.json()
 }
 
 async function adddestination(destIp, destPort) {
-    const url = `http://127.0.0.1:9000/adddestination?destIp=${destIp}&destPort=${destPort}&id=${id}`
+    const url = `${relayServerUrl}/adddestination?destIp=${destIp}&destPort=${destPort}&id=${id}`
     let resp = await fetch(url)
     return await resp.json()
 }
