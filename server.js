@@ -6,9 +6,9 @@ const EventEmitter = require("events")
 
 const app = express()
 app.listen(9000, '0.0.0.0')
+app.use(cors())
 app.use(router)
 app.use(express.static('example'))
-app.use(cors())
 
 let pairMap = new Map()
 const serverIp = "192.168.125.116"

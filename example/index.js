@@ -12,7 +12,8 @@ const offerOptions = {
     offerToReceiveVideo: 1
 };
 let id = random()
-const relayServerUrl = "http://192.168.125.140:9000"
+// const relayServerUrl = "http://192.168.125.140:9000"
+const relayServerUrl = "http://192.168.125.116:9000"
 
 async function start() {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: {width: 240, height: 180} });
